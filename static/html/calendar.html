@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+    
+    <!-- Full Calendar -->
+    <link href="/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="/plugins/fullcalendar/fullcalendar.print.css" rel="stylesheet">
+    <script src="/plugins/fullcalendar/moment.min.js"></script>
+    <script src="/plugins/fullcalendar/fullcalendar.min.js"></script>
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>日历模板模板
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+</body>
+<script type="text/javascript">
+$('#calendar').fullCalendar({
+    aspectRatio: 1.50,
+    header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+    },
+    monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+    dayNamesShort: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+    today: ["今天"],
+    firstDay: 1,
+    buttonText: {
+        today: '本月',
+        month: '月',
+        week: '周',
+        day: '日',
+        prev: '上一月',
+        next: '下一月'
+    },
+    defaultDate: '2017-11-12',
+    lang: 'zh-cn',
+    navLinks: true, // can click day/week names to navigate views
+    select: function(start, end) {
+        var title = prompt('填写你的记录的:');
+        var eventData;
+        if (title) {
+            eventData = {
+                title: title,
+                start: start,
+                end: end
+            };
+            $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+        }
+        $('#calendar').fullCalendar('unselect');
+    },
+    editable: false,
+    selectable: false,
+    selectHelper: true,
+    eventClick: function(event, jsEvent, view) {
+    },
+    events: [{
+        id: 1,
+        title: '事件一事件一事件一',
+        start: '2017-11-01',
+        end: '2017-11-2'
+    }, {
+        id: 2,
+        title: '事件二事件二事件二',
+        start: '2017-11-07',
+        end: '2017-11-10'
+    }]
+});
+
+</script>
+</html>

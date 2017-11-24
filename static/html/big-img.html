@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+    
+    <link rel="stylesheet" type="text/css" href="/plugins/blueimp/blueimp-gallery.min.css">
+    <script type="text/javascript" src="/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+    <style>
+        .lightBoxGallery img {
+            margin: 5px;
+            width: 160px;
+        }
+    </style>
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>点击查看图片大图
+        </div>
+        
+        
+        <div class="lightBoxGallery">
+            <a href="/img/1.png" data-gallery=""><img src="/img/1.png"></a>
+            <a href="/img/1.png" data-gallery=""><img src="/img/1.png"></a>
+            <a href="/img/1.png" data-gallery=""><img src="/img/1.png"></a>
+            <div id="blueimp-gallery" class="blueimp-gallery">
+                <div class="slides"></div>
+                <a class="prev" style="display: block;">‹</a>
+                <a class="next" style="display: block;">›</a>
+                <a class="close"  style="display: block;">×</a>
+            </div>
+        </div>    
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+
+input[type="checkbox"] {
+	vertical-align: middle;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+
+.layerBox {
+	position: absolute;
+	right: 0px;
+	top: 6px;
+	width: 300px;
+	height: 100%;
+	background: white;
+}
+
+.coordinate {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: rgb(80, 80, 80);
+	font-size: 12px;
+	padding: 5px 10px;
+	background: rgb(215, 215, 215);
+	border-radius: 4px;
+}
+
+.maptype {
+	position: absolute;
+	top: -5px;
+	right: 306px;
+	width: 80px;
+	height: 82px;
+	transition: 0.3s;
+	z-index: 9999999;
+}
+
+.maptype-card {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: url(./img/maptype.png);
+	border: 1px solid #ccc;
+	cursor: pointer;
+	transition: 0.3s;
+	color: #fff;
+}
+
+.maptype-card[data-name="satellite"] {
+	top: 10px;
+	background-position: -60px 0;
+}
+
+.maptype-card.maptype-below1 {
+	top: 10px;
+	opacity: 0.2;
+}
+
+.maptype:hover {
+	height: 154px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7fffffff', endColorstr='#7fffffff');
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.maptype:hover .maptype-card.maptype-below1 {
+	top: 82px;
+	opacity: 1;
+}
+
+.maptype-card span {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 5px;
+	transition: 0.3s;
+}
+
+.maptype-card:hover {
+	border-color: #2781CD;
+}
+
+.maptype-card:hover span {
+	background: #2781CD;
+}
+
+.layerBox {
+	overflow: auto;
+	z-index: 9999;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 300px;
+    height: 98%;
+    border-radius: 5px;
+    padding: 5px;
+    background: #E9ECF3;
+}
+.layerBox .search{
+	background: white;
+	margin: 0;
+}
+.layerBox .search .am-form-field{
+	border: 1px solid #c2cad8;
+	border-right: none;
+	text-indent: 10px;
+}
+
+/* ztree style */
+.ztree{
+	margin: 5px 0;
+	background:white;
+}
+
+.score{
+	background: white;
+	margin-bottom: 5px;
+}
+.score .am-list{
+	font-size: 14px;
+}
+.score .am-list>li>.am-badge{
+	float: none;
+	margin-right: 10px;
+}
+.score .am-list i{
+	margin:0 20px;
+}
+.table-main{
+	background: white;
+}

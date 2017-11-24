@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>弹出层编辑页
+        </div>
+        <p><span class="text-danger">注意：</span>弹出层记得设置合适的高度，1.最好是操作按钮上下间距一致。2.如果不是内容特别多的特使情况下最好不要出现滚动条</p>
+        <button class="btn btn-primary" onclick="openDetail1()">
+            打开编辑内容弹窗----一列
+        </button>
+        <button class="btn btn-primary" onclick="openDetail2()">
+            打开编辑内容弹窗----二列
+        </button>
+        <button class="btn btn-primary" onclick="openDetail3()">
+            打开编辑内容弹窗----多列
+        </button>
+    </div>
+</body>
+<script type="text/javascript">
+    function openDetail1(){
+       parent.layer.open({
+            type: 2,
+            title: ['编辑', 'font-weight:bold;'],
+            shadeClose: true,
+            shade: 0.6,
+            area: ['780px', '270px'],
+            content: "/html/open-edit-open1.html"
+        }); 
+    }
+    function openDetail2(){
+       parent.layer.open({
+            type: 2,
+            title: ['编辑', 'font-weight:bold;'],
+            shadeClose: true,
+            shade: 0.6,
+            area: ['780px', '270px'],
+            content: "/html/open-edit-open2.html"
+        }); 
+    }
+    function openDetail3(){
+       parent.layer.open({
+            type: 2,
+            title: ['编辑', 'font-weight:bold;'],
+            shadeClose: true,
+            shade: 0.6,
+            area: ['1100px', '275px'],
+            content: "/html/open-edit-open3.html"
+        }); 
+    }
+</script>
+</html>

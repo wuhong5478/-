@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+    <!-- zTree -->
+    <link rel="stylesheet" type="text/css" href="/plugins/zTree/zTreeStyle/zTreeStyle.css">
+    <script type="text/javascript" src="/plugins/zTree/jquery.ztree.core.min.js"></script>
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>无checkbox
+        </div>
+        <p>zTree官网 <a href="http://www.treejs.cn/v3/demo.php#_101" target="_blank">http://www.treejs.cn/v3/demo.php#_101</a>,更多详细功能请看官网api</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    显示节点图标
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    不显示节点图标
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul id="treeDemo1" class="ztree"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var zNodes = [{
+            name: "父节点1 - 展开",
+            open: true,
+            children: [{
+                    name: "父节点11 - 折叠",
+                    children: [
+                        { name: "叶子节点111" },
+                        { name: "叶子节点112" },
+                        { name: "叶子节点113" },
+                        { name: "叶子节点114" }
+                    ]
+                },
+                {
+                    name: "父节点12 - 折叠",
+                    children: [
+                        { name: "叶子节点121" },
+                        { name: "叶子节点122" },
+                        { name: "叶子节点123" },
+                        { name: "叶子节点124" }
+                    ]
+                },
+                { name: "父节点13 - 没有子节点", isParent: true }
+            ]
+        },
+        {
+            name: "父节点2 - 折叠",
+            children: [{
+                    name: "父节点21 - 展开",
+                    open: true,
+                    children: [
+                        { name: "叶子节点211" },
+                        { name: "叶子节点212" },
+                        { name: "叶子节点213" },
+                        { name: "叶子节点214" }
+                    ]
+                },
+                {
+                    name: "父节点22 - 折叠",
+                    children: [
+                        { name: "叶子节点221" },
+                        { name: "叶子节点222" },
+                        { name: "叶子节点223" },
+                        { name: "叶子节点224" }
+                    ]
+                },
+                {
+                    name: "父节点23 - 折叠",
+                    children: [
+                        { name: "叶子节点231" },
+                        { name: "叶子节点232" },
+                        { name: "叶子节点233" },
+                        { name: "叶子节点234" }
+                    ]
+                }
+            ]
+        },
+        { name: "父节点3 - 没有子节点", isParent: true }
+
+    ];
+
+    var setting = {
+        view: {
+            showIcon: showIconForTree
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+
+    var zNodes1 = [{
+            name: "父节点1 - 展开",
+            open: true,
+            children: [{
+                    name: "父节点11 - 折叠",
+                    children: [
+                        { name: "叶子节点111" },
+                        { name: "叶子节点112" },
+                        { name: "叶子节点113" },
+                        { name: "叶子节点114" }
+                    ]
+                },
+                {
+                    name: "父节点12 - 折叠",
+                    children: [
+                        { name: "叶子节点121" },
+                        { name: "叶子节点122" },
+                        { name: "叶子节点123" },
+                        { name: "叶子节点124" }
+                    ]
+                },
+                { name: "父节点13 - 没有子节点", isParent: true }
+            ]
+        },
+        {
+            name: "父节点2 - 折叠",
+            children: [{
+                    name: "父节点21 - 展开",
+                    open: true,
+                    children: [
+                        { name: "叶子节点211" },
+                        { name: "叶子节点212" },
+                        { name: "叶子节点213" },
+                        { name: "叶子节点214" }
+                    ]
+                },
+                {
+                    name: "父节点22 - 折叠",
+                    children: [
+                        { name: "叶子节点221" },
+                        { name: "叶子节点222" },
+                        { name: "叶子节点223" },
+                        { name: "叶子节点224" }
+                    ]
+                },
+                {
+                    name: "父节点23 - 折叠",
+                    children: [
+                        { name: "叶子节点231" },
+                        { name: "叶子节点232" },
+                        { name: "叶子节点233" },
+                        { name: "叶子节点234" }
+                    ]
+                }
+            ]
+        },
+        { name: "父节点3 - 没有子节点", isParent: true }
+
+    ];
+
+    function showIconForTree(treeId, treeNode) {
+        return !treeNode.isParent;
+    };
+
+    $(document).ready(function() {
+        $.fn.zTree.init($("#treeDemo"), {}, zNodes);
+        $.fn.zTree.init($("#treeDemo1"), setting, zNodes);    
+    });
+</script>
+
+</html>

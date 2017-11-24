@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+    <!-- zTree -->
+    <link rel="stylesheet" type="text/css" href="/plugins/zTree/zTreeStyle/zTreeStyle.css">
+    <script type="text/javascript" src="/plugins/zTree/jquery.ztree.core.min.js"></script>
+    <script type="text/javascript" src="/plugins/zTree/jquery.ztree.excheck.min.js"></script>
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>无checkbox
+        </div>
+        <p>zTree官网 <a href="http://www.treejs.cn/v3/demo.php#_101" target="_blank">http://www.treejs.cn/v3/demo.php#_101</a>,更多详细功能请看官网api</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    显示checkbox
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var setting = {
+        check: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        }
+    };
+    var zNodes = [
+        { id: 1, pId: 0, name: "随意勾选 1", open: true },
+        { id: 11, pId: 1, name: "随意勾选 1-1", open: true },
+        { id: 111, pId: 11, name: "随意勾选 1-1-1" },
+        { id: 112, pId: 11, name: "随意勾选 1-1-2" },
+        { id: 12, pId: 1, name: "随意勾选 1-2", open: true },
+        { id: 121, pId: 12, name: "随意勾选 1-2-1" },
+        { id: 122, pId: 12, name: "随意勾选 1-2-2" },
+        { id: 2, pId: 0, name: "随意勾选 2", checked: true, open: true },
+        { id: 21, pId: 2, name: "随意勾选 2-1" },
+        { id: 22, pId: 2, name: "随意勾选 2-2", open: true },
+        { id: 221, pId: 22, name: "随意勾选 2-2-1", checked: true },
+        { id: 222, pId: 22, name: "随意勾选 2-2-2" },
+        { id: 23, pId: 2, name: "随意勾选 2-3" }
+    ];
+
+    $(document).ready(function() {
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+</script>
+
+</html>

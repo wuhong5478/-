@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>详细页
+        </div>
+        <p>表格总宽度算100%，可以给th，td设置想要的比例来分割表格，得到想要的布局，具体可看例子</p>
+        <button type="button" class="btn btn-primary" onclick="openDetail()">打开弹出层详细页--内容较少</button>
+        <button type="button" class="btn btn-primary" onclick="openDetail1()">打开弹出层详细页--内容较复杂</button>
+    </div>
+</body>
+<script type="text/javascript">
+    function openDetail(){
+       parent.layer.open({
+            type: 2,
+            title: ['详细', 'font-weight:bold;'],
+            shadeClose: true,
+            shade: 0.6,
+            area: ['50%', '300px'],
+            content: "/html/open-detail-open.html"
+        }); 
+    }
+
+    function openDetail1(){
+       parent.layer.open({
+            type: 2,
+            title: ['详细', 'font-weight:bold;'],
+            shadeClose: true,
+            shade: 0.6,
+            area: ['80%', '500px'],
+            content: "/html/open-detail-open1.html"
+        }); 
+    }
+</script>
+</html>

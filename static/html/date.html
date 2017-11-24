@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    
+    <!-- 公共模板begin -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <!-- 公共模板end -->
+
+    <!-- 日期引用begin -->
+    <link rel="stylesheet" type="text/css" href="/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript" src="/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <!-- 日期引用end -->
+</head>
+
+<body class="wrapBox animated fadeIn">
+    <div class="wrap">
+        <div class="wrap-title">
+            <span class="tpl-icon-sx"></span>各类日期选择
+        </div>
+        <p>日期选择依赖于bootstrap-date插件，此插件涵盖所有情况下的时间选择，如有哪个参数不清楚的可以看官网 http://www.bootcss.com/p/bootstrap-datetimepicker/</p>
+        <br><br>
+        <p>选择年月日</p>
+        <div class="input-group date form_date col-xs-2" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+            <input class="form-control" size="16" type="text" value="" readonly="" placeholder="请选择年月日">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+
+        <br><br>
+        <p>选择时分</p>
+        <div class="input-group date form_date1 col-xs-2" data-date="" data-date-format="hh:ii">
+            <input class="form-control" size="16" type="text" value="" readonly="" placeholder="请选择年月日">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+
+        <br><br>
+        <p>选择年</p>
+        <div class="input-group date form_date2 col-xs-2" data-date="" data-date-format="yyyy">
+            <input class="form-control" size="16" type="text" value="" readonly="" placeholder="请选择年月日">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+
+        <br><br>
+        <p>选择月</p>
+        <div class="input-group date form_date3 col-xs-2" data-date="" data-date-format="yyyy">
+            <input class="form-control" size="16" type="text" value="" readonly="" placeholder="请选择月">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $('.form_date').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            pickerPosition: "bottom-left"
+        });
+        $('.form_date1').datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            pickerPosition: "bottom-left"
+        });
+        $('.form_date2').datetimepicker({
+            language:  'zh-CN',
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 4,
+            minView: 4,
+            pickerPosition: "bottom-left"
+        });
+        $('.form_date3').datetimepicker({
+            language:  'zh-CN',
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 3,
+            minView: 3,
+            pickerPosition: "bottom-left"
+        });
+    </script> 
+</body>
+
+</html>
