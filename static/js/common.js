@@ -149,7 +149,7 @@ $(function(){
 			ulLength+= $(obj).width();	
 		});
 		$(".page-tab-box").css('width',ulLength+2);
-
+		
 		//如果page-tab-box 宽度大page-tabcontain  则定位到最后	
 		if(ulLength>$('.page-tabcontain').width()){
 			$(".page-tab-box").css('right',0);
